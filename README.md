@@ -6,23 +6,16 @@ Start your next Python project with everything already set up.
 
 ### Step 1: Get the code
 
-Click the green **"Fork"** button at the top of this page to copy this template to your GitHub account.
+1. Click the green **"Use this template"** button at the top of this page
+2. Select **"Create a new repository"**
+3. Give your project a name and click **"Create repository"**
 
-Then open your terminal and clone that repository on your machine.
+Once created, clone it to your machine. Open your terminal and run:
 
-> **New to the terminal?** On Mac, open the "Terminal" app. On Windows, search for "PowerShell". The terminal is where you type commands to interact with your computer.
-
-First, input your GitHub username and the name of the project:
-
-```bash
-export GH_USERNAME="YOUR_USERNAME"
-export GH_PROJECT_NAME="PROJECT_NAME"
-```
-
-Then clone it to your machine:
+> **New to the terminal?** On Mac, open the "Terminal" app. On Windows, search for "PowerShell".
 
 ```bash
-git clone https://github.com/${GH_USERNAME}/${GH_PROJECT_NAME}.git
+git clone https://github.com/YOUR_USERNAME/YOUR_PROJECT_NAME.git
 cd YOUR_PROJECT_NAME
 ```
 
