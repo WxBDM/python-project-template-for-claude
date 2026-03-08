@@ -9,6 +9,12 @@
 
 ## Project Documentation
 
+When writing any form of documentation (in-line, docstrings, and external):
+
+- Avoid bloating and over-explaining. Explain the non-obvious (and the why, if necessary)
+- Avoid emojis.
+- Gear the language to developers and avoid AI slop and common phrases.
+
 ### Project documentation with Mkdocs
 
 The project documentation can be found under the docs folder. You are to put all project documentation in here using mkdocs.
