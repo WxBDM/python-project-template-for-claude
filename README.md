@@ -79,9 +79,7 @@ uv run main.py
 | Tool | What it does |
 |------|--------------|
 | [uv](https://docs.astral.sh/uv/) | Installs and manages Python packages |
-| [Black](https://black.readthedocs.io/) | Formats your code automatically |
-| [isort](https://pycqa.github.io/isort/) | Organizes your import statements |
-| [Ruff](https://docs.astral.sh/ruff/) | Catches common mistakes in your code |
+| [Ruff](https://docs.astral.sh/ruff/) | Formats code and catches common mistakes |
 | [pytest](https://docs.pytest.org/) | Runs your tests |
 | [MkDocs](https://www.mkdocs.org/) | Creates documentation websites |
 | [Pydantic](https://docs.pydantic.dev/) | Validates data in your application |
@@ -97,6 +95,7 @@ your-project/
 ├── main.py                 # Your application starts here
 ├── .env                    # Your secret settings (API keys, etc.)
 ├── pyproject.toml          # Project settings and dependencies
+├── Dockerfile              # Container configuration
 ├── docs/                   # Documentation files
 ├── .pre-commit-config.yaml # Pre-commit hook settings
 └── CLAUDE.md               # Development guidelines
@@ -132,7 +131,7 @@ uv remove requests
 ### Code quality tools
 
 ```bash
-uv run black .              # Auto-format your code
+uv run ruff format .        # Auto-format your code
 uv run ruff check .         # Check for issues
 uv run ruff check . --fix   # Fix issues automatically
 ```
@@ -153,9 +152,8 @@ If you enabled pre-commit hooks during setup, they automatically check your code
 When you run `git commit`, you'll see:
 
 ```
-black................................................Passed
-isort................................................Passed
 ruff.................................................Passed
+ruff-format..........................................Passed
 ```
 
 If something fails, the tools usually fix it automatically. Just run:

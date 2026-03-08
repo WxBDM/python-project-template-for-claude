@@ -25,6 +25,10 @@ sed -i.bak "s/name = \"python-project-setup-sample\"/name = \"$project_name\"/" 
 # Install dependencies
 uv sync
 
+# Update Dockerfile with Python version
+py_version=$(uv run python -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
+sed -i.bak "s/python:VERSION-slim/python:${py_version}-slim/" Dockerfile && rm -f Dockerfile.bak
+
 # Pre-commit hooks
 read -p "Install pre-commit hooks? (recommended) (y/n): " setup_precommit
 [[ "$setup_precommit" =~ ^[Yy]$ ]] && uv run pre-commit install

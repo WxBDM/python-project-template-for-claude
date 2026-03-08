@@ -1,4 +1,4 @@
-# Sample Project Guidelines
+# Guidelines and Rules
 
 ## General Guidelines for Project Development and Evolution
 
