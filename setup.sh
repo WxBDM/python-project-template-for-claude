@@ -16,7 +16,6 @@ uv sync
 # Python version
 read -p "Python version (3.8-3.14) [3.14]: " py_version
 py_version=${py_version:-3.14}
-echo "$py_version" > .python-version
 
 # Dockerfile setup
 read -p "Include Dockerfile? (y/N): " include_dockerfile
